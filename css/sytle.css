@@ -1,0 +1,290 @@
+/* 基本設定 */
+:root {
+    --main-bg-color: #121212;
+    --secondary-bg-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --primary-color: #00aaff;
+    --primary-hover-color: #0088cc;
+    --border-color: #333;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.bg-dark {
+    background-color: var(--secondary-bg-color);
+}
+
+/* ヘッダー */
+.header {
+    background-color: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-title {
+    font-size: 1.5em;
+    margin: 0;
+    color: #fff;
+}
+
+.header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.header nav li {
+    margin-left: 25px;
+}
+
+.header nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header nav a:hover {
+    color: var(--primary-color);
+}
+
+/* メインビジュアル (Hero) */
+.hero {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+/* 概要 (About) */
+#about {
+    padding-top: 80px; /* ヘッダーの高さ分 */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image {
+    max-width: 40%;
+    border-radius: 10px;
+}
+
+/* 特徴 (Features) */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-item {
+    background-color: var(--main-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background-color: var(--secondary-bg-color);
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* スクリーンショット (Gallery) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* トレーラー (Trailer) */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* ダウンロード (Download) */
+.download-section {
+    text-align: center;
+}
+
+.download-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.download-button {
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.download-button:hover {
+    transform: translateY(-3px);
+}
+
+.store-a { background-color: #007bff; }
+.store-b { background-color: #28a745; }
+
+
+/* フッター */
+.footer {
+    background-color: var(--secondary-bg-color);
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.social-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2em;
+    }
+    .header .container {
+        flex-direction: column;
+    }
+    .header nav ul {
+        margin-top: 10px;
+    }
+    .hero h2 {
+        font-size: 2.5em;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .about-image {
+        max-width: 100%;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .download-buttons {
+        flex-direction: column;
+    }
+}
