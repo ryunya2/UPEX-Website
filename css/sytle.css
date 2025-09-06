@@ -225,6 +225,7 @@ body {
 /* ===== 各能力説明 (Characters) ===== */
 .characters-grid {
     display: grid;
+    /* 画面サイズに応じて列数を自動調整 */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     text-align: center;
@@ -232,8 +233,11 @@ body {
 
 .character-item {
     background-color: var(--secondary-bg-color);
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .character-image {
@@ -247,8 +251,18 @@ body {
 
 .character-item h3 {
     font-size: 1.5em;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #fff;
+}
+
+.character-item p {
+    margin: 4px 0; /* 段落ごとの上下の余白を調整 */
+}
+
+/* ★★★ ここを追加 ★★★ */
+.ability-summary {
+    color: #489b4b; /* 指定された緑色 */
+    font-weight: 700; /* 文字を少し太くする */
 }
 
 
