@@ -6,6 +6,7 @@
     --primary-color: #00aaff;
     --primary-hover-color: #0088cc;
     --border-color: #333;
+    --attention-color: #ffc107; /* 目立たせるための色 */
 }
 
 body {
@@ -158,29 +159,28 @@ body {
 /* ===== 特徴 (Features) ===== */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    text-align: center;
 }
 
 .feature-item {
     background-color: var(--main-bg-color);
     padding: 30px;
     border-radius: 10px;
-}
-
-.feature-icon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 20px;
-    border-radius: 50%;
-    background-color: var(--secondary-bg-color);
+    text-align: left; /* ★★★ 変更：テキストを左揃えに ★★★ */
 }
 
 .feature-item h3 {
     font-size: 1.5em;
-    margin-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 15px;
     color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color); /* タイトルを強調 */
+    padding-bottom: 10px;
+}
+
+.feature-item p:last-child {
+    margin-bottom: 0;
 }
 
 
@@ -225,7 +225,6 @@ body {
 /* ===== 各能力説明 (Characters) ===== */
 .characters-grid {
     display: grid;
-    /* 画面サイズに応じて列数を自動調整 */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     text-align: center;
@@ -245,7 +244,7 @@ body {
     height: 120px;
     margin-bottom: 20px;
     border-radius: 50%;
-    object-fit: cover; /* 画像が円形に収まるように調整 */
+    object-fit: cover;
     border: 3px solid var(--primary-color);
 }
 
@@ -256,13 +255,12 @@ body {
 }
 
 .character-item p {
-    margin: 4px 0; /* 段落ごとの上下の余白を調整 */
+    margin: 4px 0;
 }
 
-/* ★★★ ここを追加 ★★★ */
 .ability-summary {
-    color: #489b4b; /* 指定された緑色 */
-    font-weight: 700; /* 文字を少し太くする */
+    color: #489b4b;
+    font-weight: 700;
 }
 
 
@@ -273,26 +271,32 @@ body {
 
 .download-buttons {
     margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
 }
 
-.download-button {
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
+/* ★★★ ここを追加/変更 ★★★ */
+.download-buttons h2 {
+    color: var(--attention-color);
+    font-size: 2.2em;
     font-weight: bold;
-    border-radius: 5px;
-    transition: transform 0.3s, background-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: 2px solid var(--attention-color);
+    display: inline-block;
+    animation: pulse 2s infinite; /* 点滅するようなアニメーションを追加 */
 }
 
-.download-button:hover {
-    transform: translateY(-3px);
-}
-
-.store-a {
-    background-color: #007bff;
+/* 点滅アニメーションの定義 */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 193, 7, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+    }
 }
 
 
@@ -332,7 +336,7 @@ body {
     
     .header nav ul {
         margin-top: 10px;
-        flex-wrap: wrap; /* ナビゲーションが折り返すように */
+        flex-wrap: wrap;
         justify-content: center;
     }
 
@@ -355,13 +359,9 @@ body {
     .features-grid {
         grid-template-columns: 1fr;
     }
-    
-    .download-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .download-button {
-        width: 80%;
+    .download-buttons h2 {
+        font-size: 1.8em; /* スマホでは少し小さく */
+        padding: 15px;
     }
 }
