@@ -365,3 +365,86 @@ body {
         padding: 15px;
     }
 }
+
+/* ===== アニメーション関連のスタイル ===== */
+
+/* ヒーローセクションのロード時アニメーション */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-title {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-subtitle {
+    opacity: 0; /* 最初は非表示 */
+    animation: fadeInUp 1s ease-out 0.5s forwards; /* 0.5秒遅れて開始 */
+}
+
+
+/* スクロール時のフェードインアニメーション */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ギャラリーや能力一覧で、各アイテムが少しずつずれて表示されるようにする */
+.gallery-grid .fade-in-section:nth-child(2),
+.characters-grid .fade-in-section:nth-child(2) {
+    transition-delay: 0.1s;
+}
+.gallery-grid .fade-in-section:nth-child(3),
+.characters-grid .fade-in-section:nth-child(3) {
+    transition-delay: 0.2s;
+}
+.gallery-grid .fade-in-section:nth-child(4),
+.characters-grid .fade-in-section:nth-child(4) {
+    transition-delay: 0.3s;
+}
+.characters-grid .fade-in-section:nth-child(5) {
+    transition-delay: 0.1s;
+}
+.characters-grid .fade-in-section:nth-child(6) {
+    transition-delay: 0.2s;
+}
+.characters-grid .fade-in-section:nth-child(7) {
+    transition-delay: 0.3s;
+}
+.characters-grid .fade-in-section:nth-child(8) {
+    transition-delay: 0.4s;
+}
+/* ...必要に応じて続ける */
+
+
+/* ★★★ 各能力説明のホバーエフェクトを追加 ★★★ */
+.character-item {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.character-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}

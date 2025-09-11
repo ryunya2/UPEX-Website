@@ -10,7 +10,6 @@
     <title>UPEX - 公式サイト</title>
 
     <!-- CSSファイルとGoogle Fontsの読み込み -->
-    <!-- (注) cssフォルダの中のstyle.cssを読み込みます -->
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -39,8 +38,9 @@
         <!-- メインビジュアル (Hero) -->
         <section class="hero">
             <div class="hero-content">
-                <h2>鷹校祭でしか体験できないことを！！</h2>
-                <p>UNIX部員がマインクラフトを用いて作成したFPSゲーム</p>
+                <!-- このセクションはページ読み込み時にアニメーションします -->
+                <h2 class="hero-title">鷹校祭でしか体験できないことを！！</h2>
+                <p class="hero-subtitle">UNIX部員がマインクラフトを用いて作成したFPSゲーム</p>
                 <a href="#download" class="cta-button">今すぐ予約！</a>
             </div>
         </section>
@@ -48,8 +48,8 @@
         <!-- ゲーム概要 -->
         <section id="about" class="section">
             <div class="container">
-                <h2 class="section-title">ゲーム概要</h2>
-                <div class="about-content">
+                <h2 class="section-title fade-in-section">ゲーム概要</h2>
+                <div class="about-content fade-in-section">
                     <p>UPEXとは、UNIX部員がマインクラフトを用いて作成したFPSゲームです。プレイヤーは多彩な能力を駆使して戦略的に戦い、勝利を目指します。2025年度鷹校祭にてプレー可能ですので、ぜひお越しください！
                     </p>
                 </div>
@@ -59,19 +59,19 @@
         <!-- ゲームの特徴 -->
         <section id="features" class="section bg-dark">
             <div class="container">
-                <h2 class="section-title">ゲームの特徴</h2>
+                <h2 class="section-title fade-in-section">ゲームの特徴</h2>
                 <div class="features-grid">
-                    <div class="feature-item">
+                    <div class="feature-item fade-in-section">
                         <h3>特徴1</h3>
                         <p>合計13種類の能力を使うことが可能!!</p>
                         <p>※一試合につき1種類の能力がランダムで選ばれる仕組みです</p>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item fade-in-section">
                         <h3>特徴2</h3>
                         <p>敵に矢を二発与えることで基礎能力がレベルアップ!!</p>
                         <p>基礎能力強化として矢のリロード時間短縮または矢の最大所持本数増加のどちらかがランダムでつきます！！</p>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item fade-in-section">
                         <h3>特徴3</h3>
                         <p>1試合最大10人での対戦が可能!!</p>
                         <p>1試合最大10人での対戦が可能で、最後の一人になるまで戦い続けます！！</p>
@@ -83,12 +83,12 @@
         <!-- 実際の画面(スクショ) -->
         <section id="gallery" class="section">
             <div class="container">
-                <h2 class="section-title">実際のプレー画面</h2>
+                <h2 class="section-title fade-in-section">実際のプレー画面</h2>
                 <div class="gallery-grid">
-                    <img src="https://via.placeholder.com/600x400" alt="実際の画面1">
-                    <img src="https://via.placeholder.com/600x400" alt="実際の画面2">
-                    <img src="https://via.placeholder.com/600x400" alt="実際の画面3">
-                    <img src="https://via.placeholder.com/600x400" alt="実際の画面4">
+                    <img src="https://via.placeholder.com/600x400" alt="実際の画面1" class="fade-in-section">
+                    <img src="https://via.placeholder.com/600x400" alt="実際の画面2" class="fade-in-section">
+                    <img src="https://via.placeholder.com/600x400" alt="実際の画面3" class="fade-in-section">
+                    <img src="https://via.placeholder.com/600x400" alt="実際の画面4" class="fade-in-section">
                 </div>
             </div>
         </section>
@@ -96,14 +96,14 @@
         <!-- Tier表 -->
         <section id="trailer" class="section bg-dark">
             <div class="container">
-                <h2 class="section-title">Tier表</h2>
+                <h2 class="section-title fade-in-section">Tier表</h2>
                 <div class="tier-content">
-                    <p>開発陣Aさんが作る最強能力Tier表</p>
-                    <img src="image/Tier_A.png" alt="開発陣AさんのTier表の画像" class="tier-image">
-                    <p>開発陣Bさんが作る最強能力Tier表</p>
-                    <img src="image/Tier_B.png" alt="開発陣BさんのTier表の画像" class="tier-image">
-                    <p>開発陣Cさんが作る初めて使う人でも強い能力Tier表</p>
-                    <img src="image/Tier_C.png" alt="開発陣CさんのTier表の画像" class="tier-image">
+                    <p class="fade-in-section">開発陣Aさんが作る最強能力Tier表</p>
+                    <img src="image/Tier_A.png" alt="開発陣AさんのTier表の画像" class="tier-image fade-in-section">
+                    <p class="fade-in-section">開発陣Bさんが作る最強能力Tier表</p>
+                    <img src="image/Tier_B.png" alt="開発陣BさんのTier表の画像" class="tier-image fade-in-section">
+                    <p class="fade-in-section">開発陣Cさんが作る初めて使う人でも強い能力Tier表</p>
+                    <img src="image/Tier_C.png" alt="開発陣CさんのTier表の画像" class="tier-image fade-in-section">
                 </div>
             </div>
         </section>
@@ -111,81 +111,82 @@
         <!-- 各能力説明 -->
         <section id="characters" class="section">
             <div class="container">
-                <h2 class="section-title">各能力説明</h2>
+                <h2 class="section-title fade-in-section">各能力説明</h2>
                 <div class="characters-grid">
-                    <div class="character-item">
+                    <!-- 各アイテムに .fade-in-section を追加 -->
+                    <div class="character-item fade-in-section">
                         <img src="image/Ability/爆弾.png" alt="爆弾の画像" class="character-image">
                         <h3>爆弾</h3>
                         <p class="ability-summary">爆発する矢で敵を吹っ飛ばす能力</p>
                         <p>この矢は任意のタイミングで爆発させることができる</p>
                     </div>
-                    <div class="character-item">
+                    <div class="character-item fade-in-section">
                         <img src="image/Ability/操弾.png" alt="操弾の画像" class="character-image">
                         <h3>操弾</h3>
                         <p class="ability-summary">矢を視点の方向に操作する能力</p>
                         <p>発射した矢が自分の視点と同じ方向に飛ぶようになります。矢を回収することができ、自分にあたるとインベントリに追加されます</p>
                     </div>
-                    <div class="character-item">
+                    <div class="character-item fade-in-section">
                         <img src="image/Ability/強靭.png" alt="強靭の画像" class="character-image">
                         <h3>強靭</h3>
                         <p class="ability-summary">追加の体力が付与される能力</p>
                         <p>追加体力は削られても、一定時間経過後回復する。この体力はポーションで回復することはできない。</p>
                     </div>
-                    <div class="character-item">
+                    <div class="character-item fade-in-section">
                         <img src="image/Ability/閃光.png" alt="閃光の画像" class="character-image">
                         <h3>閃光</h3>
                         <p class="ability-summary">閃光弾を打つことができる能力</p>
                         <p>矢が着弾したとき、自身を含む周囲のプレイヤーの視界を奪う</p>
                     </div>
-                    <div class="character-item">
+                    <div class="character-item fade-in-section">
                         <img src="image/Ability/狙撃.png" alt="狙撃の画像" class="character-image">
                         <h3>狙撃</h3>
                         <p class="ability-summary">即着弾する弾を撃てる能力</p>
                         <p>この弾は直線上に飛ぶ</p>
                     </div>
-                    <div class="character-item">
+                    <div class="character-item fade-in-section">
                         <img src="image/Ability/転移.png" alt="転移の画像" class="character-image">
                         <h3>転移</h3>
                         <p class="ability-summary">フィールドのあらゆる場所に瞬間移動する能力</p>
                         <p>自身が登録した地点に瞬間移動することができる</p>
                     </div>
-                    <div class="character-item">
+                    <div class="character-item fade-in-section">
                         <img src="image/Ability/隠密.png" alt="隠密の画像" class="character-image">
                         <h3>隠密</h3>
                         <p class="ability-summary">透明化状態になれる能力</p>
                         <p>透明化中は攻撃することができない。透明化は弓を構える/攻撃を食らうことで強制解除される</p>
                     </div>
-                    <div class="character-item">
+                    <div class="character-item fade-in-section">
                         <img src="image/Ability/跳躍.png" alt="跳躍の画像" class="character-image">
                         <h3>跳躍</h3>
                         <p class="ability-summary">高い機動力でフィールドを飛び回る能力</p>
                         <p>ジャンプの高さは3種類あり、チャージ時間によって切り替わる</p>
                     </div>
-                    <div class="character-item">
+                    <div class="character-item fade-in-section">
                         <img src="image/Ability/魔眼.png" alt="魔眼の画像" class="character-image">
                         <h3>魔眼</h3>
                         <p class="ability-summary">見ているプレイヤーを石化させる能力</p>
                         <p>視点の先にいるプレイヤーに「暗闇」「鈍足」を付与する。左クリックで視点の先にいるプレイヤーを石化させる</p>
                     </div>
-                    <div class="character-item">
+                    <div class="character-item fade-in-section">
                         <img src="image/Ability/無敵.png" alt="無敵の画像" class="character-image">
                         <h3>無敵</h3>
                         <p class="ability-summary">敵からの攻撃を無効化させる能力</p>
                         <p>最大10秒間無敵になれ、時間は画面下の表示で確認することができる。無敵になれる時間は無敵化してないときに貯まっていく。</p>
                     </div>
-                    <div class="character-item">
+                    <div class="character-item fade-in-section">
                         <img src="image/Ability/探知.png" alt="探知の画像" class="character-image">
                         <h3>探知</h3>
                         <p class="ability-summary">敵の位置を看破する能力</p>
                         <p>矢の着弾地点周辺のプレイヤーに発光状態を付与する。発光状態のプレイヤーは常に全プレイヤーに把握されてしまう</p>
                     </div>
-                    <div class="character-item">
+                    <div class="character-item fade-in-section">
                         <img src="image/Ability/速射.png" alt="速射の画像" class="character-image">
                         <h3>速射</h3>
                         <p class="ability-summary">矢を即座に打つことができる能力</p>
                         <p>速射の矢を所持しており、矢を即座に打つことができる</p>
                     </div>
-                    <div class="character-item">
+                    <div class="character-item fade-in-section">
                         <img src="image/Ability/跳弾.png" alt="跳弾の画像" class="character-image">
                         <h3>跳弾</h3>
                         <p class="ability-summary">バウンドする矢を駆使して戦う能力</p>
@@ -198,9 +199,9 @@
         <!-- プレー方法・予約 -->
         <section id="download" class="section">
             <div class="container download-section">
-                <h2 class="section-title">今すぐプレー！</h2>
-                <p>2025年度鷹校祭にてプレー可能</p>
-                <div class="download-buttons">
+                <h2 class="section-title fade-in-section">今すぐプレー！</h2>
+                <p class="fade-in-section">2025年度鷹校祭にてプレー可能</p>
+                <div class="download-buttons fade-in-section">
                     <h2>今すぐ南21で予約！！</h2>
                 </div>
             </div>
@@ -218,6 +219,8 @@
         </div>
     </footer>
 
+    <!-- ★★★ JavaScriptファイルをここに読み込みます ★★★ -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
