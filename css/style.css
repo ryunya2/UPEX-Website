@@ -148,18 +148,17 @@ body {
     display: flex;
     align-items: center;
     gap: 40px;
-}
-
-.about-image {
-    max-width: 40%;
-    border-radius: 10px;
+    max-width: 800px; /* 文章が長くなりすぎないように幅を制限 */
+    margin: 0 auto; /* 中央揃え */
+    text-align: center;
 }
 
 
 /* ===== 特徴 (Features) ===== */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* ★★★ ここを変更：2列のグリッドレイアウトに ★★★ */
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
@@ -167,7 +166,7 @@ body {
     background-color: var(--main-bg-color);
     padding: 30px;
     border-radius: 10px;
-    text-align: left; /* ★★★ 変更：テキストを左揃えに ★★★ */
+    text-align: left;
 }
 
 .feature-item h3 {
@@ -175,7 +174,7 @@ body {
     margin-top: 0;
     margin-bottom: 15px;
     color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color); /* タイトルを強調 */
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 10px;
 }
 
@@ -273,7 +272,6 @@ body {
     margin-top: 30px;
 }
 
-/* ★★★ ここを追加/変更 ★★★ */
 .download-buttons h2 {
     color: var(--attention-color);
     font-size: 2.2em;
@@ -283,7 +281,7 @@ body {
     border-radius: 10px;
     border: 2px solid var(--attention-color);
     display: inline-block;
-    animation: pulse 2s infinite; /* 点滅するようなアニメーションを追加 */
+    animation: pulse 2s infinite;
 }
 
 /* 点滅アニメーションの定義 */
@@ -352,10 +350,7 @@ body {
         flex-direction: column;
     }
     
-    .about-image {
-        max-width: 100%;
-    }
-    
+    /* ★★★ ここを変更：スマホでは1列に ★★★ */
     .features-grid {
         grid-template-columns: 1fr;
     }
@@ -365,6 +360,7 @@ body {
         padding: 15px;
     }
 }
+
 
 /* ===== アニメーション関連のスタイル ===== */
 
@@ -393,7 +389,8 @@ body {
     animation: fadeInUp 1s ease-out forwards;
 }
 
-.hero-subtitle {
+/* hero-subtitleクラスをheroセクション内のpタグに適用 */
+.hero-content p.hero-subtitle {
     opacity: 0; /* 最初は非表示 */
     animation: fadeInUp 1s ease-out 0.5s forwards; /* 0.5秒遅れて開始 */
 }
@@ -411,7 +408,18 @@ body {
     transform: translateY(0);
 }
 
-/* ギャラリーや能力一覧で、各アイテムが少しずつずれて表示されるようにする */
+/* 各アイテムが少しずつずれて表示されるようにする */
+/* ★★★ 特徴セクションの遅延を追加・変更 ★★★ */
+#features .feature-item:nth-child(2) {
+    transition-delay: 0.1s;
+}
+#features .feature-item:nth-child(3) {
+    transition-delay: 0.2s;
+}
+#features .feature-item:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
 .gallery-grid .fade-in-section:nth-child(2),
 .characters-grid .fade-in-section:nth-child(2) {
     transition-delay: 0.1s;
@@ -439,7 +447,7 @@ body {
 /* ...必要に応じて続ける */
 
 
-/* ★★★ 各能力説明のホバーエフェクトを追加 ★★★ */
+/* 各能力説明のホバーエフェクト */
 .character-item {
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
